@@ -242,7 +242,7 @@ var rm = new function() {
   this.init = function(){
     rm.map = new google.maps.Map(document.getElementById("map"), {zoom:14, mapTypeId:google.maps.MapTypeId.ROADMAP, mapTypeControl:false, navigationControl:true, scaleControl:false, navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL} });
     google.maps.event.addListener(rm.map, 'click', function(e) { rm.click(e.latLng); });
-    rm.dialog("<p>Fare Map enables you to know how much you should pay for your auto-rickshaw or taxi trip.</p><p>To start you can use the location we've detected, or pick another if you like. Next, click the map again for your destination to see suggested routes.</p><p>Note: You can also drag the markers around to update routes.</p><p class='err'></p>");
+    rm.dialog("<p>Fare Map enables you to know how much you should pay for your auto-rickshaw or <strike>taxi</strike> trip.</p><p>To start you can use the location we've detected, or pick another if you like. Next, click the map again for your destination to see suggested routes.</p><p>Note: You can also drag the markers around to update routes.</p><p class='err'></p>");
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(rm.yes, rm.no);
     }
