@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "museo";
+  src: url('fonts/Museo_Slab_500-webfont.eot');
+  src: url('fonts/Museo_Slab_500-webfont.eot?#iefix') format('eot'), url('fonts/Museo_Slab_500-webfont.ttf') format('truetype'), url('fonts/Museo_Slab_500-webfont.woff') format('woff'), url('fonts/Museo_Slab_500-webfont.svg') format('svg');
+}
+
 /**
-Fare-map: Mapping public-transport fares
-Copyright (C) 2011  Jayesh Gohel
+Fare Map: Mapping public-transport fares
+Author: Jayesh Gohel (gnatih@github)
 **/
-/* line 6, ../scss/style.scss */
+/* line 9, ../scss/style.scss */
 html, body, #wrapper {
   width: 100%;
   height: 100%;
@@ -11,23 +17,24 @@ html, body, #wrapper {
   overflow: hidden;
 }
 
-/* line 14, ../scss/style.scss */
+/* line 17, ../scss/style.scss */
 body {
   font-size: 13px;
+  font-family: "museo", sans-serif;
 }
 
-/* line 15, ../scss/style.scss */
+/* line 18, ../scss/style.scss */
 a {
   outline: none;
 }
 
-/* line 17, ../scss/style.scss */
+/* line 20, ../scss/style.scss */
 #map {
   height: 100%;
   background: #ccc;
 }
 
-/* line 22, ../scss/style.scss */
+/* line 25, ../scss/style.scss */
 #dialog {
   color: #000;
   padding: 16px;
@@ -42,7 +49,7 @@ a {
   border: 1px solid #999999;
 }
 
-/* line 35, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 #info {
   color: #333;
   background: #ddd;
@@ -57,13 +64,13 @@ a {
   border: 1px solid #999999;
 }
 
-/* line 49, ../scss/style.scss */
+/* line 52, ../scss/style.scss */
 #info p {
   font-size: 17px;
   text-shadow: 0 1px 1px white;
 }
 
-/* line 50, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 #logo {
   font-size: 20px;
   font-weight: bold;
@@ -71,7 +78,7 @@ a {
   text-shadow: 0 1px 1px white;
 }
 
-/* line 51, ../scss/style.scss */
+/* line 54, ../scss/style.scss */
 #loc {
   outline: none;
   font-size: 10px;
@@ -86,12 +93,12 @@ a {
   border: 1px solid #333333;
 }
 
-/* line 52, ../scss/style.scss */
+/* line 55, ../scss/style.scss */
 #loc option {
   outline: none;
 }
 
-/* line 54, ../scss/style.scss */
+/* line 57, ../scss/style.scss */
 #rid {
   width: 100%;
   border-collapse: separate;
@@ -102,7 +109,7 @@ a {
   margin: 0;
 }
 
-/* line 64, ../scss/style.scss */
+/* line 67, ../scss/style.scss */
 #rid th {
   font-size: 11px;
   text-align: left;
@@ -110,23 +117,23 @@ a {
   text-shadow: 0 1px 1px white;
 }
 
-/* line 65, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 #rid tr {
   cursor: pointer;
 }
 
-/* line 66, ../scss/style.scss */
+/* line 69, ../scss/style.scss */
 #rid td {
   padding: 4px 8px;
   font-size: 16px;
 }
 
-/* line 68, ../scss/style.scss */
+/* line 71, ../scss/style.scss */
 #btns {
   margin: 8px 0;
 }
 
-/* line 70, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 .btn {
   padding: 4px 6px;
   font-size: 90%;
@@ -142,12 +149,12 @@ a {
   -webkit-border-radius: 4px;
 }
 
-/* line 85, ../scss/style.scss */
+/* line 88, ../scss/style.scss */
 .btn:hover {
   background: #c33100;
 }
 
-/* line 87, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 #overlay {
   width: 100%;
   height: 100%;
@@ -166,7 +173,7 @@ a {
   display: none;
 }
 
-/* line 102, ../scss/style.scss */
+/* line 105, ../scss/style.scss */
 .r {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -174,27 +181,27 @@ a {
   -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* line 108, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 .err {
   color: #c33100;
 }
 
-/* line 108, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 .red {
   background: #f41;
 }
 
-/* line 108, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 .blue {
   background: #4682B4;
 }
 
-/* line 108, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 .orange {
   background: orange;
 }
 
-/* line 110, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 #ad {
   position: absolute;
   right: 0;
