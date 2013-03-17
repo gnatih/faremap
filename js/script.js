@@ -46,20 +46,20 @@ var rm = new function() {
     var c = $("#info .content");
     var i = 0;
     var dist = [];
-    var str = '<table id="rid"><tr><th>Dist. (km)</th><th>Units read</th><th>Fare (Rs.)</th></tr>';
+    var str = '<table id="rid"><tr><th>&nbsp;</th><th>Units</th><th>Fare</th></tr>';
     $(rm.routes).each(function(){
       var d = rm.routes[i].legs[0].distance.value * .001;
       dist.push(d);
       str+='<tr class="route_' + i +'" style="';
       if(i==0) str+='color:#fff;'; else str+='color:#333;';
-      str+='"><td class="'+ rm.c[i]+'">' + d.toFixed(2) + '</td><td class="'+ rm.c[i]+'">' + rm.units(d) + '</td><td class="'+ rm.c[i]+'">' + rm.fare(rm.units(d), rm.p) + '</td></tr>';
+      str+='"><td class="'+ rm.c[i]+'">' + d.toFixed(2) + ' <span class="small">km</span></td><td class="'+ rm.c[i]+'">' + rm.units(d) + '</td><td class="'+ rm.c[i]+'">&#8377;&nbsp;' + rm.fare(rm.units(d), rm.p)  + '</td></tr>';
       i++;
     });
     str+='</table>';
     dist.sort().reverse();
     
     var fare = rm.fare(rm.units(dist[0]), rm.p);
-    str+='<p>You should not be paying more than <b>Rs.&nbsp;' + fare + '</b>.</p>';
+    str+='<p>You should not be paying more than <b>&#8377;&nbsp;' + fare + '</b>.</p>';
     c.append(str);
     
     $("#rid tr").click(function () {
@@ -96,6 +96,7 @@ var rm = new function() {
       case "ahmadabad":
         var lo = range(25,500,4);
         var unit = 0;
+        console.log(lo);
         for(var i=0; i<lo.length; i++){
           if(u >= lo[i]) {
             unit = i+1;
@@ -103,7 +104,7 @@ var rm = new function() {
             unit = 0;  
           }
         }
-        unit = (unit * 1.2) + 9;
+        unit = (unit * 1.7) + 13;
       break;
       
       case "delhi":
@@ -126,7 +127,7 @@ var rm = new function() {
         }
       break;
     }
-    return unit.toFixed(2);
+    return unit.toFixed(0);
   };
   
   this.defaultLoc= function(l){
