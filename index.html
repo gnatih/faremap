@@ -1,2 +1,54 @@
-<h2>Fare Map</h2>
-<p>Placeholder page</p>
+<!DOCTYPE html>
+<!-- 
+Fare-map: Mapping public-transport fares
+Copyright (C) 2011  Jayesh Gohel
+-->
+<html>
+<head>
+<title>Fare Map</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="description" content="Rickfare map allows you to know your auto rickshaw fares." />
+<meta name="keywords" content="Rickshaw, auto rickshaw, auto, fare, auto rikshaw fares, rikshaw fares, taxi fares, ahmedabad, mumbai, delhi, pune, bangalore, taxi" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/s.js"></script>
+<link type="text/css" rel="stylesheet" href="css/s.css" />
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="map"></div>
+    <div id="dialog"></div>
+    <div id="info" class="r">
+      <div class="content"></div>
+      <div>
+      <a id="logo">Fare Map</a>
+      <select id="loc" class="tk-museo-slab">
+        <option value="ahmadabad">Ahmedabad</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="pune">Pune</option>
+      </select>
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </div>
+  <script type="text/javascript" src="http://use.typekit.com/koo1czn.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20874669-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
