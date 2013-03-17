@@ -1,4 +1,4 @@
-faremap
+Fare Map
 =======
 
-Fare Map: Mapping auto-rickshaw fares
+Mapping auto-rickshaw fares
