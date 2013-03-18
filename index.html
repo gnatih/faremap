@@ -11,7 +11,7 @@ Author: Jayesh Gohel (gnatih@github)
       <meta name="viewport" content="width=device-width">
       <meta name="description" content="Rickfare map allows you to know your auto rickshaw fares." />
       <meta name="keywords" content="Rickshaw, auto rickshaw, auto, fare, auto rikshaw fares, rikshaw fares, taxi fares, ahmedabad, mumbai, delhi, pune, bangalore, taxi" />
-      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
       <link type="text/css" rel="stylesheet" href="css/style.css" />
@@ -19,7 +19,7 @@ Author: Jayesh Gohel (gnatih@github)
 <body>
   <div id="wrapper">
     <div id="map"></div>
-    <div id="dialog"></div>
+    <div id="dialog" class="r"></div>
     <div id="info" class="r">
       <div class="content"></div>
       <div>
@@ -35,7 +35,6 @@ Author: Jayesh Gohel (gnatih@github)
     </div>
     <div id="overlay"></div>
   </div>
-  <a href="https://github.com/gnatih/faremap"><img style="z-index:9999; position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
   <script type="text/javascript">
 
     var _gaq = _gaq || [];

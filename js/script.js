@@ -13,7 +13,7 @@ var rm = new function() {
   this.count = 0;
   
   this.directions = function(){
-    if(rm.pline) rm.pline.setMap(null); $("#info .content").empty();
+    if(rm.pline) rm.pline.setMap(null); { $("#info .content").empty(); $("#info").removeClass("active"); }
     var o = rm.m[0].position;
     var d = rm.m[1].position;
     rm.service.route( {origin:o, destination:d, travelMode:google.maps.DirectionsTravelMode.DRIVING, unitSystem: google.maps.DirectionsUnitSystem.METRIC, optimizeWaypoints:true, provideRouteAlternatives: true} , rm.process);
@@ -43,6 +43,7 @@ var rm = new function() {
   };
   
   this.results= function(){
+    $("#info").addClass("active");
     var c = $("#info .content");
     var i = 0;
     var dist = [];
@@ -180,18 +181,13 @@ var rm = new function() {
   
   this.dialog= function(msg){
     var d = $("#dialog");
-    var w = $(window).width();
-    var h = $(window).height();
     if($("#msg").length == 0){
       var btn = "<div id='btns'><a href='#' id='pick' class='btn'>Pick a location</a><a href='#' id='use' class='btn'>Use my location</a></div>";
       var m = "<div id='msg'></div>";
       d.append(m+btn);
       $('#msg').html(msg);
     }
-    var t = (h/2) - (d.height()/2);
-    var l = (w/2) - (d.width()/2);
-    $("#overlay").css({width:w, height:h}).show();
-    d.addClass("r").css({top:t, left:l}).show();
+    $("#overlay").show();
   };
   
   this.click= function(l){
@@ -269,6 +265,12 @@ $(function(){
   });
   $("#loc").change(function() {
     rm.defaultLoc($(this).val());
+  });
+
+  $("#logo").click(function(e){
+    if(!$("#info .content").is(":empty")){
+      $("#info").toggleClass("active");
+    }
   });
 });
 
