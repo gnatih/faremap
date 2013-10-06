@@ -193,9 +193,9 @@ var rm = new function() {
   this.click= function(l){
     if(rm.m.length < 2){
       this.count++;
-      mIcon = "http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png";
+      mIcon = "//www/github/faremap/images/end.png";
       if(this.count == 1){
-        mIcon = "http://www.google.com/intl/en_us/mapfiles/ms/micons/green-dot.png";
+        mIcon = "//www/github/faremap/images/start.png";
       }
       var m = new google.maps.Marker({ position:l, map:rm.map, draggable:true, icon:mIcon });
       google.maps.event.addListener(m, "dragend", rm.directions);
