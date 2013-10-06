@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 2013-10-06:v01
+
+# Explicitly cached entries
+index.html
+css/style.css
+css/fonts/museo-slab-500.ttf
+js/script.js
+images/faremap-128x128.png
+images/faremap-129x129.png
+images/faremap-196x196.png
+
+NETWORK:
+*
